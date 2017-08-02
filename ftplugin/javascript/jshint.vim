@@ -72,11 +72,12 @@ endif
 
 " Set up command and parameters
 
-let s:plugin_path = s:install_dir . "/jshint/"
-if has('win32')
-  let s:plugin_path = substitute(s:plugin_path, '/', '\', 'g')
-endif
-let s:cmd = "cd " . s:plugin_path . " && ./runner.js"
+let s:cwd = expand("%:p:h")
+let s:plugin_path = s:install_dir
+" if has('win32')
+"   let s:plugin_path = substitute(s:plugin_path, '/', '\', 'g')
+" endif
+let s:cmd = "cd " . s:plugin_path . "/../.. && ./index.js '" . s:cwd . "'"
 
 " FindRc() will try to find a .jshintrc up the current path string
 " If it cannot find one it will try looking in the home directory
@@ -101,7 +102,7 @@ if !exists("*s:FindRc")
   endfun
 endif
 
-call s:FindRc(expand("%:p:h"))
+call s:FindRc(s:cwd)
 
 " WideMsg() prints [long] message up to (&columns-1) length
 " guaranteed without "Press Enter" prompt.
