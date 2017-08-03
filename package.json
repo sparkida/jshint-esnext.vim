@@ -23,7 +23,7 @@
     "react-tools": "^0.11.0"
   },
   "bin": {
-    "jshint-esnext.vim.js": "index.js"   
+    "jshint-esnext.vim.js": "index.js"
   },
   "license": "BSD"
 }
