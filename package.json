@@ -13,7 +13,10 @@
     "async await",
     "esnext"
   ],
-  "repository": "https://github.com/sparkida/jshint-eslint.vim.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkida/jshint-eslint.vim.git"
+  },
   "dependencies": {
     "copy-dir": "^0.3.0",
     "jshint": "^2.9.5",
@@ -25,5 +28,12 @@
   "bin": {
     "jshint-esnext.vim.js": "index.js"
   },
-  "license": "BSD"
+  "license": "(MIT) SEE ./LICENSE",
+  "bugs": {
+    "url": "https://github.com/sparkida/jshint-eslint.vim/issues"
+  },
+  "homepage": "https://github.com/sparkida/jshint-eslint.vim#readme",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "Nicholas Riley"
 }
